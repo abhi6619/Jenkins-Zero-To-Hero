@@ -12,9 +12,6 @@ metadata:
     controller: true
     kind: ReplicaSet
     name: hello-minikube-58f7c595dd
-    uid: 65bb16e7-96ce-4f0b-9be2-34b8dc29e3b8
-  resourceVersion: "36727"
-  uid: a8131309-6e0e-4f95-85bc-7494932cfff5
 spec:
   containers:
   - image: kicbase/echo-server:1.0
