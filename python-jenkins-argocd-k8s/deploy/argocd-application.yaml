@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: vintage-car-booking
+  namespace: argocd
+
+spec:
+
+  project: default
+
+  source:
+    repoURL: https://github.com/abhi6619/Jenkins-Zero-To-Hero.git
+    targetRevision: main
+    path: python-jenkins-argocd-k8s/deploy
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: vintage-car
+
+  syncPolicy:
+
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
