@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: vintage-car-booking
+  namespace: vintage-car
+
+spec:
+  selector:
+    app: vintage-car-booking
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+
+  type: ClusterIP
