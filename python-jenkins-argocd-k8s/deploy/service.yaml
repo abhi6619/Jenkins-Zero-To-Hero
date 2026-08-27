@@ -1,13 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: vintage-car-booking:/Service:vintage-car/todo-service
   name: todo-service
+  namespace: vintage-car
 spec:
-  type: NodePort
+  ports:
+    - nodePort: 32000
+      port: 80
+      protocol: TCP
+      targetPort: 8000
   selector:
     app: nginx
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8000
-      nodePort: 32000
+  type: NodePort
