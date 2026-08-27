@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: vintage-car-booking
-          image: localhost/vintage:v6
+          image: docker.io/abhi7677/vintage-car-booking:v6
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
