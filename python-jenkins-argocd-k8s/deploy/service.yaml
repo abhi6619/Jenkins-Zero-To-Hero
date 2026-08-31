@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/tracking-id: vintage-car-booking:/Service:vintage-car/todo-service
   name: todo-service
-  namespace: vintage-car
+  namespace: abhi
   namespace: default
 spec:
   ports:
