@@ -4,7 +4,7 @@ metadata:
   labels:
     app: hello-minikube
   name: hello-minikube
-  namespace: default
+  namespace: abhi
 spec:
   clusterIP: 10.107.208.5
   clusterIPs:
